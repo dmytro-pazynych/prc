@@ -13,3 +13,8 @@ body {
 img {
 	height: 150px;
 }
+
+img:hover {
+    position: relative;
+    top: 10px;
+}
