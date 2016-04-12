@@ -58,7 +58,9 @@ $(document).ready(function(){
             $("#count").append( counterUser + " : " + counterComputer); 
         }
         
-        $("#count").removeClass("green, red, black");
+        $("#count").removeClass("green");
+        $("#count").removeClass("red");
+        $("#count").removeClass("black");
         if (counterUser > counterComputer){
             $("#count").addClass("green");
         } else if (counterComputer > counterUser){
