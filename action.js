@@ -42,21 +42,29 @@ $(document).ready(function(){
         console.log(compare(userChoice, computerChoice));
         var result  = compare(userChoice, computerChoice)[0];
         $('ul').append("<li>Your choice is " + userChoice + "<br>Computer choice is  " + computerChoice + "<br>" + result + "</li>");
+        $("#reload").fadeIn("slow");
         if (result === "You win!"){
             counterUser += 1;
-            $("p").html("");
-            $("p").append( counterUser + " : " + counterComputer);
+            $("#count").html("");
+            $("#count").append( counterUser + " : " + counterComputer);
         } else if (result === "The result is a tie!"){
             counterUser += 1;
             counterComputer += 1;
-            $("p").html("");
-            $("p").append( counterUser + " : " + counterComputer);
+            $("#count").html("");
+            $("#count").append( counterUser + " : " + counterComputer);
         } else {
            counterComputer += 1;
-            $("p").html("");
-            $("p").append( counterUser + " : " + counterComputer); 
+            $("#count").html("");
+            $("#count").append( counterUser + " : " + counterComputer); 
         }
-    })  
+    }) 
+    
+    $("#reload").click(function(event){
+        $("#reload").fadeOut("fast")
+        counterUser = 0;
+        counterComputer = 0;
+        $("#count").html("");
+        $("ul").html("");
+    })
+    
 })
-
-
