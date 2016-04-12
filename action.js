@@ -57,10 +57,20 @@ $(document).ready(function(){
             $("#count").html("");
             $("#count").append( counterUser + " : " + counterComputer); 
         }
+        
+        $("#count").removeClass("green, red, black");
+        if (counterUser > counterComputer){
+            $("#count").addClass("green");
+        } else if (counterComputer > counterUser){
+            $("#count").addClass("red");
+        } else {
+            $("#count").addClass("black");
+        }
+        
     }) 
     
     $("#reload").click(function(event){
-        $("#reload").fadeOut("fast")
+        $("#reload").fadeOut("0.001")
         counterUser = 0;
         counterComputer = 0;
         $("#count").html("");
