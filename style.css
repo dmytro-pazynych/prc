@@ -17,6 +17,7 @@ img {
 img:hover {
     position: relative;
     top: 10px;
+    cursor:pointer;
 }
 
 img:active {
@@ -42,6 +43,7 @@ img:active {
 
 #reload:hover {
     font-size: 17px;
+    cursor:pointer;
 }
 
 li {
