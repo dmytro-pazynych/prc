@@ -49,3 +49,15 @@ img:active {
 li {
     font-family: sans-serif;
 }
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.black {
+    color: black;
+}
