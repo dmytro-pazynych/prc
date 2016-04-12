@@ -11,10 +11,23 @@ body {
 }
 
 img {
-	height: 150px;
+    height: 150px;
 }
 
 img:hover {
     position: relative;
     top: 10px;
+}
+
+img:active {
+    position: relative;
+    left: 10px;
+}
+
+p {
+    float: right;
+    font-size: 50px;
+    position: relative;
+    right: 100px;
+    font-family: sans-serif;
 }
