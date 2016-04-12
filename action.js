@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    
+    var counterUser = 0;
+    var counterComputer = 0;
+    
     $('img').click(function(event){
         console.log("User: " + event.target.id);
         var userChoice = event.target.id;
@@ -14,29 +18,44 @@ $(document).ready(function(){
         
         var compare = function (choice1, choice2) {
             if (choice1 === choice2) {
-                return "The result is a tie!";
+                return ["The result is a tie!", 0];
             } else if (choice1 === "rock") {
                 if (choice2 === "scissors") {
-                return "You win!";
+                return ["You win!", choice1];
                 } else {
-                return "Computer wins!";
+                return ["Computer wins!", choice2];
                 };
             } else if (choice1 === "paper") {
                 if (choice2 === "rock") {
-                return "You win!";
+                return ["You win!", choice1];
                 } else {
-                return "Computer wins!"
+                return ["Computer wins!", choice2];
                 };
             } else if (choice1 === "scissors") {
                 if (choice2 === "rock") {
-                return "Computer wins!";
+                return ["Computer wins!", choice2];
                 } else {
-                return "You win!";
+                return ["You win!", choice1];
                 };
             };
         }; 
         console.log(compare(userChoice, computerChoice));
-        $('ul').append("<li>Your choice is " + userChoice + "<br>Computer choice is  " + computerChoice + "<br>" + compare(userChoice, computerChoice) + "</li>");
+        var result  = compare(userChoice, computerChoice)[0];
+        $('ul').append("<li>Your choice is " + userChoice + "<br>Computer choice is  " + computerChoice + "<br>" + result + "</li>");
+        if (result === "You win!"){
+            counterUser += 1;
+            $("p").html("");
+            $("p").append( counterUser + " : " + counterComputer);
+        } else if (result === "The result is a tie!"){
+            counterUser += 1;
+            counterComputer += 1;
+            $("p").html("");
+            $("p").append( counterUser + " : " + counterComputer);
+        } else {
+           counterComputer += 1;
+            $("p").html("");
+            $("p").append( counterUser + " : " + counterComputer); 
+        }
     })  
 })
 
