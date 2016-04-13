@@ -1,6 +1,9 @@
 body {
 	margin: 0;
 }
+body {
+	margin: 0;
+}
 
 #header {
 	background-color: black;
@@ -8,6 +11,15 @@ body {
 	color: white;
 	font-size: 30px;
 	font-family: Verdana;
+}
+
+#images {
+    width:70%;
+    display: inline;
+}
+
+#compImg {
+    float: right;
 }
 
 img {
@@ -28,9 +40,8 @@ img:active {
 
 #count {
     float: right;
-    font-size: 50px;
-    position: relative;
-    right: 100px;
+    font-size: 40px;
+    width: 25%;
     font-family: sans-serif;
 }
 
