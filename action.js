@@ -77,6 +77,7 @@ $(document).ready(function(){
         counterComputer = 0;
         $("#count").html("");
         $("ul").html("");
+        $("#compImg").html("");
     })
     
 })
