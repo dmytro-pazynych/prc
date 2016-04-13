@@ -16,6 +16,9 @@ $(document).ready(function(){
 	       computerChoice = "scissors";
         } console.log("Computer: " + computerChoice);
         
+        $("#compImg").html("");
+        $("#compImg").append("<img src=" + computerChoice +".png />");
+        
         var compare = function (choice1, choice2) {
             if (choice1 === choice2) {
                 return ["The result is a tie!", 0];
@@ -53,7 +56,7 @@ $(document).ready(function(){
         };
         
         $("#count").html("");
-        $("#count").append( counterUser + " : " + counterComputer);
+        $("#count").append( counterUser + " : " + counterComputer + "<br>" + result);
         
         $("#count").removeClass("green");
         $("#count").removeClass("red");
