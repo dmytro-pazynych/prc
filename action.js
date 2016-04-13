@@ -45,7 +45,7 @@ $(document).ready(function(){
         console.log(compare(userChoice, computerChoice));
         var result  = compare(userChoice, computerChoice)[0];
         $('ul').append("<li>Your choice is " + userChoice + "<br>Computer choice is  " + computerChoice + "<br>" + result + "</li>");
-        $("#reload").fadeIn("slow");
+        $(".reload").fadeIn("slow");
         if (result === "You win!"){
             counterUser += 1;
         } else if (result === "The result is a tie!"){
@@ -71,8 +71,8 @@ $(document).ready(function(){
         
     }) 
     
-    $("#reload").click(function(event){
-        $("#reload").fadeOut("0.001")
+    $(".reload").click(function(event){
+        $(".reload").fadeOut("0.001")
         counterUser = 0;
         counterComputer = 0;
         $("#count").html("");
@@ -81,5 +81,3 @@ $(document).ready(function(){
     })
     
 })
-
-
