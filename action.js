@@ -44,7 +44,7 @@ $(document).ready(function(){
         }; 
         console.log(compare(userChoice, computerChoice));
         var result  = compare(userChoice, computerChoice)[0];
-        $('ul').append("<li>Your choice is " + userChoice + "<br>Computer choice is  " + computerChoice + "<br>" + result + "</li>");
+        $('ul').prepend("<li>Your choice is " + userChoice + "<br>Computer choice is  " + computerChoice + "<br>" + result + "</li>");
         $(".reload").fadeIn("slow");
         if (result === "You win!"){
             counterUser += 1;
