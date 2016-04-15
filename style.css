@@ -83,7 +83,7 @@ ul {
     color: black;
 }
 
-ul:nth-child(1) {
+li:nth-child(1) {
     background-color: gray;
 }
 
