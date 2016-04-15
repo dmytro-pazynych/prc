@@ -84,6 +84,6 @@ ul {
 }
 
 ul:nth-child(1) {
-	background-color: gray;
+    background-color: gray;
 }
-}
+
